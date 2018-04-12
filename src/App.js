@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
-import AppBar from './components/AppBar.js';
-import Form from './components/Form.js';
-import Button from './components/Button.js';
+import  Main  from './components/Main';
+import  History  from './components/History';
+import  Principal  from './components/Principal';
+
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <AppBar />
-        <Form />
-        {/*<Button />*/}
-      </div>
+      <Router>
+        <main>
+          <Switch>
+            <Route exact path='/' component={Principal}/>
+            <Route path='/Main' component={Main}/>
+            <Route path='/History' component={History}/>
+          
+          </Switch>
+        </main>
+      </Router>
+      
     );
   }
 }

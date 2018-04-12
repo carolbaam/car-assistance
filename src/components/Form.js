@@ -1,6 +1,7 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import {Link} from 'react-router-dom';
 
 
 const style = {
@@ -80,7 +81,9 @@ class Form extends React.Component {
                     multiLine={true}
                     rows={4}
                 /><br />
-                <RaisedButton name="button" type="submit" label="Grua" primary={true} style={style} onClick={this.handleSubmit} />   
+                 <Link to='history'>
+                <RaisedButton name="button" type="submit" label="Grua" primary={true} style={style} /*onClick={this.handleSubmit}*/ > 
+               </RaisedButton>   </Link>
             </div>
 
         );
