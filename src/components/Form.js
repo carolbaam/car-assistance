@@ -1,6 +1,7 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import { Link } from 'react-router-dom';
 
 
 const style = {
@@ -36,13 +37,25 @@ class Form extends React.Component {
         })
     }
 
+    // handleSubmit(event) {
+    //     //console.log(event.state.value);
+    //     event.preventDefault();
+    //     alert('Su grua esta en camino');
+    //     const objectState = this.state;
+    //     console.log(objectState);
+
+    // }
+
     handleSubmit(event) {
         //console.log(event.state.value);
         event.preventDefault();
         alert('Su grua esta en camino');
         const objectState = this.state;
-        console.log(objectState);
-
+        localStorage.setItem('info', JSON.stringify(objectState));
+        localStorage.getItem('info') && this.state({
+            info: JSON.parse(localStorage.getItem('info')),
+            isLoading: false
+        })
     }
 
 
@@ -80,7 +93,10 @@ class Form extends React.Component {
                     multiLine={true}
                     rows={4}
                 /><br />
-                <RaisedButton name="button" type="submit" label="Grua" primary={true} style={style} onClick={this.handleSubmit} />   
+                {/* <RaisedButton name="button" type="submit" label="Grua" primary={true} style={style} onClick={this.handleSubmit} />    */}
+                <RaisedButton name="button" type="submit" label="Grua" primary={true} style={style} onClick={this.handleSubmit} >
+                    <Link to='history' />
+                </RaisedButton>
             </div>
 
         );
