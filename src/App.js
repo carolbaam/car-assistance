@@ -16,7 +16,6 @@ class App extends Component {
             <Route exact path='/' component={Principal}/>
             <Route path='/Main' component={Main}/>
             <Route path='/History' component={History}/>
-          
           </Switch>
         </main>
       </Router>
