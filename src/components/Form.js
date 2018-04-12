@@ -37,13 +37,25 @@ class Form extends React.Component {
         })
     }
 
+    // handleSubmit(event) {
+    //     //console.log(event.state.value);
+    //     event.preventDefault();
+    //     alert('Su grua esta en camino');
+    //     const objectState = this.state;
+    //     console.log(objectState);
+
+    // }
+
     handleSubmit(event) {
         //console.log(event.state.value);
         event.preventDefault();
         alert('Su grua esta en camino');
         const objectState = this.state;
-        console.log(objectState);
-
+        localStorage.setItem('info', JSON.stringify(objectState));
+        localStorage.getItem('info') && this.state({
+            info: JSON.parse(localStorage.getItem('info')),
+            isLoading: false
+        })
     }
 
 
