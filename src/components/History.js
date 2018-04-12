@@ -12,6 +12,7 @@ class App extends Component {
     return (
       <div className="App">
         <Main />
+        <h1>HISTORY</h1>
         <AppBar />
         <Form />
         {/*<Button />*/}
