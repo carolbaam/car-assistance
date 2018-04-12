@@ -1,14 +1,14 @@
 import React from 'react';
-import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
+
+const style = {
+  margin: 12,
+};
 
 const Button = () => (
-    <div>
-      
-      <FlatButton label="Solicite grúa" primary={true} />
-     
-     
-      
-    </div>
-  );
-  
-  export default Button;
+  <div>
+    <RaisedButton label="Grua" primary={true} style={style} />   
+  </div>
+);
+
+export default Button;
