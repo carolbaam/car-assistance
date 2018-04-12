@@ -1,11 +1,11 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
 
-const AppBarExampleIcon = () => (
+const AppBarIcon = () => (
   <AppBar
     title="Title"
     iconClassNameRight="muidocs-icon-navigation-expand-more"
   />
 );
 
-export default AppBar;
+export default AppBarIcon;
