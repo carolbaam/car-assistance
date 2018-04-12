@@ -10,7 +10,7 @@ import  Principal  from './components/Principal';
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <main>
           <Switch>
             <Route exact path='/' component={Principal}/>
