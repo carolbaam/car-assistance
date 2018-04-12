@@ -4,7 +4,7 @@ import Form from './Form';
 
 const Main = () => (
   <div className="App">
-    <AppBar />
+    <AppBar name='LLena tus datos ;)'/>
     <Form />
     {/*<Button />*/}
     
