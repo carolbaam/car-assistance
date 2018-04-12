@@ -2,7 +2,7 @@
   "name": "car-assistance",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/DanIvonneCaSan/car-assistance",
+  "homepage": "https://danivonnecasan.github.io/car-assistance/",
   "dependencies": {
     "google-maps-react": "^2.0.0",
     "material-ui": "^0.20.0",
